@@ -1,10 +1,10 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
 filename="definitions.txt"
 
 function convert_units() {
     # check if definitions file exists
-    linecount=$(cat $1 2> /dev/null | wc -l)
+    linecount=$(cat "$1" 2> /dev/null | wc -l)
     if [[ (-f "$1") && ("$linecount" -gt 0) ]]; then
         echo -e "Type the line number to convert units or '0' to return"
         print_file $1
